@@ -18,6 +18,8 @@
 <set-property name="gwt.logging.popupHandler" value="DISABLED"/>
 <set-property name="gwt.logging.firebugHandler" value="DISABLED"/>-->
 <set-property name="gwt.logging.consoleHandler" value="DISABLED"/>
+<set-property name="user.agent" value="safari"/> 
+<add-linker name="sso"/>
 <set-property name="export" value="yes"/>
 <entry-point class='client.net.sf.saxon.ce.Xslt20ProcessorImpl'/> 
 </module>
