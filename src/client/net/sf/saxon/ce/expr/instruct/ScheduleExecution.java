@@ -4,7 +4,7 @@ import client.net.sf.saxon.ce.LogController;
 import client.net.sf.saxon.ce.SaxonceApi;
 import client.net.sf.saxon.ce.client.HTTPHandler;
 import client.net.sf.saxon.ce.dom.HTMLDocumentWrapper;
-import client.net.sf.saxon.ce.dom.Sanitizer;
+//import client.net.sf.saxon.ce.dom.Sanitizer;
 import client.net.sf.saxon.ce.dom.XMLDOM;
 import client.net.sf.saxon.ce.expr.*;
 import client.net.sf.saxon.ce.functions.ResolveURI;
@@ -190,9 +190,9 @@ public class ScheduleExecution extends Instruction {
                             DocumentInfo doc = context.getConfiguration().wrapXMLDocument(responseNode, uri);
                             if (doc instanceof HTMLDocumentWrapper) {
                                 StripSpaceRules rules = context.getController().getExecutable().getStripperRules();
-                                if (rules.isStripping()) {
-                                    new Sanitizer(rules).sanitize((HTMLDocumentWrapper)doc);
-                                }
+                                //if (rules.isStripping()) {
+                                //    new Sanitizer(rules).sanitize((HTMLDocumentWrapper)doc);
+                                //}
                             }
                             pool.add(doc, uri);
                             XPathContext c2 = context.newMinorContext();

@@ -14,10 +14,10 @@
 <set-property name="gwt.logging.enabled" value="TRUE"/>
 <!-- This is the debug variant of Saxon-CE, so logging is enabled-->
 <!-- <set-property name="gwt.logging.enabled" value="TRUE"/>-->
-<!-- Only enable popupHandler through code - if no console available -->
+<!-- Only enable popupHandler through code - if no console available 
 <set-property name="gwt.logging.popupHandler" value="DISABLED"/>
+<set-property name="gwt.logging.firebugHandler" value="DISABLED"/>-->
 <set-property name="gwt.logging.consoleHandler" value="DISABLED"/>
-<set-property name="gwt.logging.firebugHandler" value="DISABLED"/>
 <set-property name="export" value="yes"/>
 <entry-point class='client.net.sf.saxon.ce.Xslt20ProcessorImpl'/> 
 </module>

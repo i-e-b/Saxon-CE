@@ -4,7 +4,7 @@ import client.net.sf.saxon.ce.Controller.APIcommand;
 import client.net.sf.saxon.ce.client.HTTPHandler;
 import client.net.sf.saxon.ce.dom.HTMLDocumentWrapper;
 import client.net.sf.saxon.ce.dom.HTMLDocumentWrapper.DocType;
-import client.net.sf.saxon.ce.dom.Sanitizer;
+//import client.net.sf.saxon.ce.dom.Sanitizer;
 import client.net.sf.saxon.ce.dom.XMLDOM;
 import client.net.sf.saxon.ce.expr.XPathContext;
 import client.net.sf.saxon.ce.expr.instruct.Executable;
@@ -391,9 +391,9 @@ public class Xslt20ProcessorImpl implements EntryPoint {
             	}
             }
 
-            if (stylesheet.getStripperRules().isStripping()) {
-                new Sanitizer(stylesheet.getStripperRules()).sanitize((HTMLDocumentWrapper)fetchedSourceDoc);
-            }
+            //if (stylesheet.getStripperRules().isStripping()) {
+            //    new Sanitizer(stylesheet.getStripperRules()).sanitize((HTMLDocumentWrapper)fetchedSourceDoc);
+            //}
             // this method only runs if transformInvoked == false - need to get sourceDoc reference if not invoked
 
             return invokeTransform(fetchedSourceDoc, target);

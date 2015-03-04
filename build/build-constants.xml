@@ -10,7 +10,7 @@
  <property name="deploy_path" value="deploy" />
  
  <!-- Configure path to GWT SDK -->
- <property name="gwt.sdk" location="../lib/gwt/gwt-2.5.0"/>
+ <property name="gwt.sdk" location="/Projects/gwt"/>
  <property name="ce.version" value="1.1" />
 
 </project>

@@ -1,8 +1,10 @@
 *.class
+*.cache.*
 
 # Package Files #
 *.jar
 *.war
+build/deploy
 
 # gwt caches and compiled units #
 war/gwt_bree/

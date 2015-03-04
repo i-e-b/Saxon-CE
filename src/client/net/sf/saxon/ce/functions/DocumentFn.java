@@ -3,7 +3,7 @@ package client.net.sf.saxon.ce.functions;
 import client.net.sf.saxon.ce.Configuration;
 import client.net.sf.saxon.ce.Controller;
 import client.net.sf.saxon.ce.dom.HTMLDocumentWrapper;
-import client.net.sf.saxon.ce.dom.Sanitizer;
+//import client.net.sf.saxon.ce.dom.Sanitizer;
 import client.net.sf.saxon.ce.expr.*;
 import client.net.sf.saxon.ce.expr.sort.DocumentOrderIterator;
 import client.net.sf.saxon.ce.expr.sort.GlobalOrderComparer;
@@ -218,9 +218,9 @@ public class DocumentFn extends SystemFunction {
             DocumentInfo newdoc = config.buildDocument(documentKey.toString());
             if (newdoc instanceof HTMLDocumentWrapper) {
                 StripSpaceRules rules = c.getController().getExecutable().getStripperRules();
-                if (rules.isStripping()) {
-                    new Sanitizer(rules).sanitize((HTMLDocumentWrapper)newdoc);
-                }
+                //if (rules.isStripping()) {
+                //    new Sanitizer(rules).sanitize((HTMLDocumentWrapper)newdoc);
+                //}
             }
             controller.registerDocument(newdoc, documentKey);
             controller.addUnavailableOutputDestination(documentKey);

@@ -30,8 +30,9 @@
     <target name="javac" depends="libs" description="Compile java source to bytecode">
         <mkdir dir="${temp_path}/WEB-INF/classes"/>
         <javac srcdir="${source_path}" includes="**" encoding="utf-8" destdir="${temp_path}/WEB-INF/classes" source="1.5"
-            target="1.5" nowarn="true" debug="true" debuglevel="lines,vars,source">
+            target="1.5" nowarn="on" debug="true" debuglevel="lines,vars,source">
             <classpath refid="project.class.path"/>
+            <compilerarg line="-Xlint:none"/>
         </javac>
         <copy todir="${temp_path}/WEB-INF/classes">
             <fileset dir="." excludes="**/*.java"/>
